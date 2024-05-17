@@ -67,7 +67,7 @@ public class WaveFunctionCollapse : MonoBehaviour
         }
 
         Tile foundTile = cellToCollapse.tileOptions[0];
-        Instantiate(foundTile, cellToCollapse.transform.position, foundTile.transform.rotation);
+        Tile generatedTile = Instantiate(foundTile, cellToCollapse.transform.position, foundTile.transform.rotation);
 
         UpdateGeneration();
     }
