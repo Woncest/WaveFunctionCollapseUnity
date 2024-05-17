@@ -98,7 +98,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de1b54d1a40fc1408ceebcd6027ac86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upNeighbours: []
-  rightNeighbours: []
-  downNeighbours: []
-  leftNeighbours: []
+  upNeighbours:
+  - {fileID: -6254088154147450607, guid: 1b3c48b18fc72104fb9f02662ac85e08, type: 3}
+  - {fileID: -6400403055534963392, guid: 26b66922ab4b7c143a57dcae5fbcd979, type: 3}
+  - {fileID: -4557248860960387976, guid: 095f7f16ce17e6b4199207b1eb9787df, type: 3}
+  - {fileID: -1348632729515565110, guid: f119b12229a1ac743bd92f736e18b777, type: 3}
+  - {fileID: -8371978942192266721}
+  rightNeighbours:
+  - {fileID: -6254088154147450607, guid: 1b3c48b18fc72104fb9f02662ac85e08, type: 3}
+  - {fileID: 2007129465078847726, guid: 34b737604887e3c4ebe9f43f12d0c6b8, type: 3}
+  - {fileID: 1487388220227568497, guid: bc6daf0f77c257c47bd7bf54242df206, type: 3}
+  - {fileID: -3212533907090793905, guid: f2f64fef2166a4e4c999b0a08cb35a21, type: 3}
+  - {fileID: -6587088760487583682, guid: c619508487190a74c9fb8f694898b473, type: 3}
+  - {fileID: -6400403055534963392, guid: 26b66922ab4b7c143a57dcae5fbcd979, type: 3}
+  - {fileID: -8371978942192266721}
+  downNeighbours:
+  - {fileID: 2007129465078847726, guid: 34b737604887e3c4ebe9f43f12d0c6b8, type: 3}
+  - {fileID: -6587088760487583682, guid: c619508487190a74c9fb8f694898b473, type: 3}
+  - {fileID: -9028518160935795302, guid: 350035c0a7f10c547ab1a8b8f52bb971, type: 3}
+  - {fileID: -1348632729515565110, guid: f119b12229a1ac743bd92f736e18b777, type: 3}
+  - {fileID: -8371978942192266721}
+  leftNeighbours:
+  - {fileID: -6254088154147450607, guid: 1b3c48b18fc72104fb9f02662ac85e08, type: 3}
+  - {fileID: 413774317759866486, guid: 1de1e19b64a3a164c9256494290a794f, type: 3}
+  - {fileID: 2007129465078847726, guid: 34b737604887e3c4ebe9f43f12d0c6b8, type: 3}
+  - {fileID: -3212533907090793905, guid: f2f64fef2166a4e4c999b0a08cb35a21, type: 3}
+  - {fileID: -4557248860960387976, guid: 095f7f16ce17e6b4199207b1eb9787df, type: 3}
+  - {fileID: -9028518160935795302, guid: 350035c0a7f10c547ab1a8b8f52bb971, type: 3}
+  - {fileID: -8371978942192266721}
