@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &210984394779603054
+--- !u!1 &1812098276692149480
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4564376363785068397}
-  - component: {fileID: 5049519656447723955}
-  - component: {fileID: 4673745395155629997}
+  - component: {fileID: 6899608390961994337}
+  - component: {fileID: 1721597884725210167}
+  - component: {fileID: 4659871802527343057}
   m_Layer: 0
-  m_Name: Street_4Way
+  m_Name: Street_Curve2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4564376363785068397
+--- !u!4 &6899608390961994337
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210984394779603054}
+  m_GameObject: {fileID: 1812098276692149480}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6295000954678752335}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5049519656447723955
+  m_Father: {fileID: 6509011923445093292}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 90, z: 0}
+--- !u!33 &1721597884725210167
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210984394779603054}
-  m_Mesh: {fileID: 4262782277766988360, guid: bc094757f0e1de34c9e176c6e227ab66, type: 3}
---- !u!23 &4673745395155629997
+  m_GameObject: {fileID: 1812098276692149480}
+  m_Mesh: {fileID: 1489566383090635253, guid: deb7afe6593b51545b38f9caeecafc99, type: 3}
+--- !u!23 &4659871802527343057
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210984394779603054}
+  m_GameObject: {fileID: 1812098276692149480}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,9 +61,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5243988174349660497, guid: bc094757f0e1de34c9e176c6e227ab66, type: 3}
-  - {fileID: -1580535799172915004, guid: bc094757f0e1de34c9e176c6e227ab66, type: 3}
-  - {fileID: -8848810374240701247, guid: bc094757f0e1de34c9e176c6e227ab66, type: 3}
+  - {fileID: -5892410554224319662, guid: deb7afe6593b51545b38f9caeecafc99, type: 3}
+  - {fileID: -1580535799172915004, guid: deb7afe6593b51545b38f9caeecafc99, type: 3}
+  - {fileID: -8848810374240701247, guid: deb7afe6593b51545b38f9caeecafc99, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &444679859456957415
+--- !u!1 &5007574943040502599
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,56 +93,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6295000954678752335}
-  - component: {fileID: 5486381760876125604}
+  - component: {fileID: 6509011923445093292}
+  - component: {fileID: -5064295054377843254}
   m_Layer: 0
-  m_Name: Street_4Way
+  m_Name: Street_Curve2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6295000954678752335
+--- !u!4 &6509011923445093292
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444679859456957415}
+  m_GameObject: {fileID: 5007574943040502599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4564376363785068397}
+  - {fileID: 6899608390961994337}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5486381760876125604
+--- !u!114 &-5064295054377843254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444679859456957415}
+  m_GameObject: {fileID: 5007574943040502599}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6de1b54d1a40fc1408ceebcd6027ac86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   upNeighbours:
-  - {fileID: 1388529660941984589, guid: fa5f543afd2b75f41877d2269093b0a2, type: 3}
-  - {fileID: 9081677715720601457, guid: eb34bda66d0c24648aa0a6de523312bd, type: 3}
-  - {fileID: -5064295054377843254, guid: 32fc434f7acfc5742a7feb92be73247a, type: 3}
+  - {fileID: 275491645254883776, guid: 500fcc5b6d89e1542b486ddc46b9d4c0, type: 3}
+  - {fileID: 736155382934070450, guid: e2c8995c2ec546d4fbd5f00f9ebe1195, type: 3}
   rightNeighbours:
-  - {fileID: 736155382934070450, guid: e2c8995c2ec546d4fbd5f00f9ebe1195, type: 3}
-  - {fileID: -5064295054377843254, guid: 32fc434f7acfc5742a7feb92be73247a, type: 3}
-  - {fileID: -7927561471151532615, guid: b5a65f2456fc41b46a1637b58c29cd42, type: 3}
-  downNeighbours:
+  - {fileID: 275491645254883776, guid: 500fcc5b6d89e1542b486ddc46b9d4c0, type: 3}
   - {fileID: 1388529660941984589, guid: fa5f543afd2b75f41877d2269093b0a2, type: 3}
-  - {fileID: -7927561471151532615, guid: b5a65f2456fc41b46a1637b58c29cd42, type: 3}
-  - {fileID: 1964730663839990732, guid: 94000aaef0c4fef45a6cf544504ebd86, type: 3}
+  downNeighbours:
+  - {fileID: 5486381760876125604, guid: 0d5fddaa9c4c976478b91fafd577287f, type: 3}
+  - {fileID: 1388529660941984589, guid: fa5f543afd2b75f41877d2269093b0a2, type: 3}
   leftNeighbours:
+  - {fileID: 5486381760876125604, guid: 0d5fddaa9c4c976478b91fafd577287f, type: 3}
   - {fileID: 736155382934070450, guid: e2c8995c2ec546d4fbd5f00f9ebe1195, type: 3}
-  - {fileID: 9081677715720601457, guid: eb34bda66d0c24648aa0a6de523312bd, type: 3}
-  - {fileID: 1964730663839990732, guid: 94000aaef0c4fef45a6cf544504ebd86, type: 3}
