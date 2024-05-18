@@ -169,16 +169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dimensions: 20
   tileObjects:
-  - {fileID: -6695874881404480244, guid: e56395000485b0f45be4da83f3e978eb, type: 3}
-  - {fileID: 3622629586917070669, guid: 064ba1fa7ca80f147ab2a10ed22ff7a4, type: 3}
-  - {fileID: -8175148231071507160, guid: 89ec5c40254e0894582c53658fee2979, type: 3}
-  - {fileID: 5417596538117276360, guid: 1192dbde6c186ce41bb96c04896aaec9, type: 3}
-  - {fileID: 5071076380322785628, guid: dccb6e85a39489f41bf63e1726ee54dd, type: 3}
-  - {fileID: -7047949737492610737, guid: d132214c520e15645a5bfba786c36e6e, type: 3}
-  - {fileID: 4522833005221784488, guid: 26b7b781acabb0745ac4705d95d78537, type: 3}
-  - {fileID: -400486917055780431, guid: da5f3021b0e9deb4f923bd7fd38ccec4, type: 3}
-  - {fileID: 8322225453839143378, guid: 7334df603df904341830896d12125545, type: 3}
-  - {fileID: -1588625916354989702, guid: 206cf12f6bb10074fa525ec3a3935036, type: 3}
   - {fileID: 6843077310972279220, guid: 58698e509cc13ac4389f73e653db7b82, type: 3}
   - {fileID: 1301996506846732080, guid: 9566163fa3f30ac44a2ca59b9b0afc06, type: 3}
   - {fileID: 1151500029846371135, guid: b4a313253f5c81046a2ec4507c3ac679, type: 3}
@@ -191,7 +181,7 @@ MonoBehaviour:
   - {fileID: 2661968908957601399, guid: fcbf43269fd353746a23381bc75cbe74, type: 3}
   gridComponents: []
   cellObj: {fileID: 4708005233751153331, guid: 936abc963f38a804e84760def12a01ee, type: 3}
-  backupTile: {fileID: -7047949737492610737, guid: d132214c520e15645a5bfba786c36e6e, type: 3}
+  backupTile: {fileID: 2661968908957601399, guid: fcbf43269fd353746a23381bc75cbe74, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
