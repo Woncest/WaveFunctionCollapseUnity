@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8935791503085862568
+--- !u!1 &7937977513637929159
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7736923868520802210}
-  - component: {fileID: 6591137349332127238}
-  - component: {fileID: 7464354547235917006}
-  - component: {fileID: 1487388220227568497}
+  - component: {fileID: 7548707891241731194}
+  - component: {fileID: 3947608375969684897}
+  - component: {fileID: 7570760953716880053}
+  - component: {fileID: 2007129465078847726}
   m_Layer: 0
-  m_Name: Street_3Way4
+  m_Name: Street_3Way3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7736923868520802210
+--- !u!4 &7548707891241731194
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8935791503085862568}
+  m_GameObject: {fileID: 7937977513637929159}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.49991274, y: 0.50008726, z: 0.49991274, w: -0.50008726}
+  m_LocalRotation: {x: 0, y: 0.7072302, z: 0.7069834, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -89.98, y: 270, z: 0}
---- !u!33 &6591137349332127238
+  m_LocalEulerAnglesHint: {x: -89.98, y: 180, z: 0}
+--- !u!33 &3947608375969684897
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8935791503085862568}
+  m_GameObject: {fileID: 7937977513637929159}
   m_Mesh: {fileID: 1660081396562376154, guid: 1bcdb6e010cfe59409e6137e98649f52, type: 3}
---- !u!23 &7464354547235917006
+--- !u!23 &7570760953716880053
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8935791503085862568}
+  m_GameObject: {fileID: 7937977513637929159}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,35 +86,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1487388220227568497
+--- !u!114 &2007129465078847726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8935791503085862568}
+  m_GameObject: {fileID: 7937977513637929159}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6de1b54d1a40fc1408ceebcd6027ac86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upNeighbours:
-  - {fileID: -3212533907090793905, guid: f2f64fef2166a4e4c999b0a08cb35a21, type: 3}
-  - {fileID: -6587088760487583682, guid: c619508487190a74c9fb8f694898b473, type: 3}
-  - {fileID: -9028518160935795302, guid: 350035c0a7f10c547ab1a8b8f52bb971, type: 3}
-  - {fileID: 4619045316536085092, guid: b0bb2044e24c051418039d1d108ab747, type: 3}
-  rightNeighbours:
-  - {fileID: 413774317759866486, guid: 1de1e19b64a3a164c9256494290a794f, type: 3}
-  - {fileID: -4557248860960387976, guid: 095f7f16ce17e6b4199207b1eb9787df, type: 3}
-  - {fileID: -1348632729515565110, guid: f119b12229a1ac743bd92f736e18b777, type: 3}
-  - {fileID: 4619045316536085092, guid: b0bb2044e24c051418039d1d108ab747, type: 3}
-  downNeighbours:
-  - {fileID: -3212533907090793905, guid: f2f64fef2166a4e4c999b0a08cb35a21, type: 3}
-  - {fileID: -6400403055534963392, guid: 26b66922ab4b7c143a57dcae5fbcd979, type: 3}
-  - {fileID: -4557248860960387976, guid: 095f7f16ce17e6b4199207b1eb9787df, type: 3}
-  - {fileID: 4619045316536085092, guid: b0bb2044e24c051418039d1d108ab747, type: 3}
-  leftNeighbours:
-  - {fileID: -3212533907090793905, guid: f2f64fef2166a4e4c999b0a08cb35a21, type: 3}
-  - {fileID: -4557248860960387976, guid: 095f7f16ce17e6b4199207b1eb9787df, type: 3}
-  - {fileID: -9028518160935795302, guid: 350035c0a7f10c547ab1a8b8f52bb971, type: 3}
-  - {fileID: -8371978942192266721, guid: c23beaaa949386144878050cb79f3847, type: 3}
+  upNeighbours: []
+  rightNeighbours: []
+  downNeighbours: []
+  leftNeighbours: []
