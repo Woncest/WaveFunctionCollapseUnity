@@ -169,13 +169,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dimensions: 20
   tileObjects:
-  - {fileID: -3212533907090793905, guid: f2f64fef2166a4e4c999b0a08cb35a21, type: 3}
-  - {fileID: -1348632729515565110, guid: f119b12229a1ac743bd92f736e18b777, type: 3}
-  - {fileID: 4619045316536085092, guid: b0bb2044e24c051418039d1d108ab747, type: 3}
-  - {fileID: -8371978942192266721, guid: c23beaaa949386144878050cb79f3847, type: 3}
+  - {fileID: 5486381760876125604, guid: 0d5fddaa9c4c976478b91fafd577287f, type: 3}
+  - {fileID: 275491645254883776, guid: 500fcc5b6d89e1542b486ddc46b9d4c0, type: 3}
+  - {fileID: 736155382934070450, guid: e2c8995c2ec546d4fbd5f00f9ebe1195, type: 3}
+  - {fileID: 1388529660941984589, guid: fa5f543afd2b75f41877d2269093b0a2, type: 3}
   gridComponents: []
   cellObj: {fileID: 4708005233751153331, guid: 936abc963f38a804e84760def12a01ee, type: 3}
-  backupTile: {fileID: 4619045316536085092, guid: b0bb2044e24c051418039d1d108ab747, type: 3}
+  backupTile: {fileID: 275491645254883776, guid: 500fcc5b6d89e1542b486ddc46b9d4c0, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
