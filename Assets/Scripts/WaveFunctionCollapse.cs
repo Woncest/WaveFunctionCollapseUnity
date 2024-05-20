@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class WaveFunctionCollapse : MonoBehaviour
 {
@@ -22,21 +23,9 @@ public class WaveFunctionCollapse : MonoBehaviour
     }
 
     private void Update(){
-        if (Input.GetKeyDown(KeyCode.R)){
-            
-            for (int i = gridComponents.Count - 1; i >= 0; i--)
-            {
-                Cell cell = gridComponents[i];
-                if (cell.collapsed)
-                {
-                    Destroy(cell.setTile.gameObject);
-                }
-                Destroy(cell.gameObject);
-                gridComponents.RemoveAt(i);
-            }
-            //gridComponents.Clear();
-            iteration = 0;
-            InitializeGrid();
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
         }
     }
 
@@ -70,6 +59,7 @@ public class WaveFunctionCollapse : MonoBehaviour
     void CollapseCell(List<Cell> tempGrid)
     {
         int randIndex = UnityEngine.Random.Range(0, tempGrid.Count);
+        bool restart = false;
 
         Cell cellToCollapse = tempGrid[randIndex];
 
@@ -81,6 +71,7 @@ public class WaveFunctionCollapse : MonoBehaviour
         }
         catch
         {
+            restart = true;
             Tile selectedTile = backupTile;
             cellToCollapse.tileOptions = new Tile[] { selectedTile };
         }
@@ -89,7 +80,11 @@ public class WaveFunctionCollapse : MonoBehaviour
         Tile generatedTile = Instantiate(foundTile, cellToCollapse.transform.position, foundTile.transform.rotation);
         cellToCollapse.setTile = generatedTile;
 
-        UpdateGeneration();
+        if(!restart){
+            UpdateGeneration();
+        }else{
+            Restart();
+        }
     }
 
     void UpdateGeneration()
@@ -208,5 +203,21 @@ public class WaveFunctionCollapse : MonoBehaviour
                 optionList.RemoveAt(x);
             }
         }
+    }
+
+    private void Restart()
+    {
+        for (int i = gridComponents.Count - 1; i >= 0; i--)
+        {
+            Cell cell = gridComponents[i];
+            if (cell.collapsed)
+            {
+                Destroy(cell.setTile.gameObject);
+            }
+            Destroy(cell.gameObject);
+            gridComponents.RemoveAt(i);
+        }
+        iteration = 0;
+        InitializeGrid();
     }
 }
