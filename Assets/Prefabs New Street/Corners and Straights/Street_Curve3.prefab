@@ -46,22 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upNeighbours:
-  - {fileID: 2758237384525503842, guid: 59900d21889a2274aac8dcafaeeee249, type: 3}
-  - {fileID: 2876946185096863699, guid: b29520c5b0a06b9499fd008626b7b21d, type: 3}
   - {fileID: 4313084029016013006, guid: cd1be432bdf7ecd478d2555c0d2dbac5, type: 3}
   rightNeighbours:
   - {fileID: 7785221410139973353, guid: 9ce415e60bc2efd4e82cdc460561aacb, type: 3}
-  - {fileID: 2758237384525503842, guid: 59900d21889a2274aac8dcafaeeee249, type: 3}
-  - {fileID: 6767155632638024183, guid: 078ff06d41c92a64287af967fa97c73a, type: 3}
-  - {fileID: 4313084029016013006, guid: cd1be432bdf7ecd478d2555c0d2dbac5, type: 3}
   downNeighbours:
   - {fileID: 7785221410139973353, guid: 9ce415e60bc2efd4e82cdc460561aacb, type: 3}
-  - {fileID: 2758237384525503842, guid: 59900d21889a2274aac8dcafaeeee249, type: 3}
-  - {fileID: 2876946185096863699, guid: b29520c5b0a06b9499fd008626b7b21d, type: 3}
-  - {fileID: 2473887064119927888, guid: dc038751f9d385447bed631d3ce7cb32, type: 3}
   leftNeighbours:
-  - {fileID: 2758237384525503842, guid: 59900d21889a2274aac8dcafaeeee249, type: 3}
-  - {fileID: 6767155632638024183, guid: 078ff06d41c92a64287af967fa97c73a, type: 3}
   - {fileID: 2473887064119927888, guid: dc038751f9d385447bed631d3ce7cb32, type: 3}
 --- !u!1 &8248862270586790636
 GameObject:
