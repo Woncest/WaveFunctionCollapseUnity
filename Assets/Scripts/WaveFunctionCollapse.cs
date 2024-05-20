@@ -104,10 +104,12 @@ public class WaveFunctionCollapse : MonoBehaviour
                 else
                 {
                     List<Tile> options = new List<Tile>();
-                    foreach(Tile t in tileObjects)
+                    //Besser ?
+                    options = gridComponents[index].tileOptions.ToList();
+                    /*foreach(Tile t in tileObjects)
                     {
                         options.Add(t);
-                    }
+                    }*/
 
                     if(y > 0)
                     {

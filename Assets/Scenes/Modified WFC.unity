@@ -183,7 +183,7 @@ MonoBehaviour:
   - {fileID: 8914043238440264813, guid: f2139f851cc4d79489085647a9297786, type: 3}
   gridComponents: []
   cellObj: {fileID: 4708005233751153331, guid: 936abc963f38a804e84760def12a01ee, type: 3}
-  backupTile: {fileID: 275491645254883776, guid: 500fcc5b6d89e1542b486ddc46b9d4c0, type: 3}
+  backupTile: {fileID: 5192539198167136981, guid: 8f9121f305c663a47bb0089cdcc7db4d, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
