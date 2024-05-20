@@ -21,6 +21,25 @@ public class WaveFunctionCollapse : MonoBehaviour
         InitializeGrid();
     }
 
+    private void Update(){
+        if (Input.GetKeyDown(KeyCode.R)){
+            
+            for (int i = gridComponents.Count - 1; i >= 0; i--)
+            {
+                Cell cell = gridComponents[i];
+                if (cell.collapsed)
+                {
+                    Destroy(cell.setTile.gameObject);
+                }
+                Destroy(cell.gameObject);
+                gridComponents.RemoveAt(i);
+            }
+            //gridComponents.Clear();
+            iteration = 0;
+            InitializeGrid();
+        }
+    }
+
     void InitializeGrid()
     {
         for(int y = 0; y < dimensions; y++)
@@ -68,6 +87,7 @@ public class WaveFunctionCollapse : MonoBehaviour
 
         Tile foundTile = cellToCollapse.tileOptions[0];
         Tile generatedTile = Instantiate(foundTile, cellToCollapse.transform.position, foundTile.transform.rotation);
+        cellToCollapse.setTile = generatedTile;
 
         UpdateGeneration();
     }

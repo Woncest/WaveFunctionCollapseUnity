@@ -15,7 +15,5 @@ public class Tile : MonoBehaviour
         transform.localScale = Vector3.zero;
 
         transform.DOScale(Vector3.one, 1f).SetEase(Ease.OutElastic);
-
-        //transform.DOScale(new Vector3(50f, 50f, 1), 1f).SetEase(Ease.OutElastic);
     }
 }

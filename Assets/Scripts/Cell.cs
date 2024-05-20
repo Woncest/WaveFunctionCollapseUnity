@@ -7,6 +7,8 @@ public class Cell : MonoBehaviour
     public bool collapsed;
     public Tile[] tileOptions;
 
+    public Tile setTile;
+
     public void CreateCell(bool collapseState, Tile[] tiles)
     {
         collapsed = collapseState;
