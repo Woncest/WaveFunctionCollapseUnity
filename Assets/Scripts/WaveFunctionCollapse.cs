@@ -6,7 +6,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using TMPro;
 
-//TOOD make that you can not only have 20x20 or 30x30 but also 20x30 or 12x24
+//TODO? make that you can not only have 20x20 or 30x30 but also 20x30 or 12x24
 //TODO make that you can have probability so that some tiles are a bit more likely
 
 public class WaveFunctionCollapse : MonoBehaviour
@@ -206,7 +206,7 @@ public class WaveFunctionCollapse : MonoBehaviour
         }else{
             successes++;
             totalAttempts++;
-            //PUT THIS INTO AGAIN IF YOU WANT IT TO AUTOMATICALLY RESTART THE GENERATION
+            //PUT THIS INTO IF YOU WANT IT TO AUTOMATICALLY RESTART THE GENERATION
             Restart();
         }
     }
