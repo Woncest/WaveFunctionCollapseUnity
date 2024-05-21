@@ -1,0 +1,6 @@
+At least 1 Street after non street:
+    50x50: 250 Runs
+    40x40: 250 Runs -21.60%
+    30x30: 250 Runs -43.6% Success Rate
+    20x20: 250 Runs -79.20% Success Rate
+    10X10: 250 Runs - 94.40% Success Rate

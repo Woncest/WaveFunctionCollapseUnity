@@ -4,6 +4,10 @@ using UnityEngine;
 using System;
 using System.Linq;
 using Unity.VisualScripting;
+using TMPro;
+
+//TOOD make that you can not only have 20x20 or 30x30 but also 20x30 or 12x24
+//TODO make that you can have probability so that some tiles are a bit more likely
 
 public class WaveFunctionCollapse : MonoBehaviour
 {
@@ -15,16 +19,22 @@ public class WaveFunctionCollapse : MonoBehaviour
     public Tile backupTile;
 
     private int iteration;
+    private int successes = 0;
+    private int totalAttempts = 0;
+
+    public TextMeshProUGUI textElement;
 
     private void Awake()
     {
         gridComponents = new List<Cell>();
+        SetTextElement();
         InitializeGrid();
     }
 
     private void Update(){
         if (Input.GetKeyDown(KeyCode.R))
         {
+            totalAttempts++;
             Restart();
         }
     }
@@ -83,6 +93,7 @@ public class WaveFunctionCollapse : MonoBehaviour
         if(!restart){
             UpdateGeneration();
         }else{
+            totalAttempts++;
             Restart();
         }
     }
@@ -192,6 +203,11 @@ public class WaveFunctionCollapse : MonoBehaviour
         if (iteration < dimensions * dimensions)
         {
             StartCoroutine(CheckEntropy());
+        }else{
+            successes++;
+            totalAttempts++;
+            //PUT THIS INTO AGAIN IF YOU WANT IT TO AUTOMATICALLY RESTART THE GENERATION
+            Restart();
         }
     }
 
@@ -209,6 +225,7 @@ public class WaveFunctionCollapse : MonoBehaviour
 
     private void Restart()
     {
+        SetTextElement();
         for (int i = gridComponents.Count - 1; i >= 0; i--)
         {
             Cell cell = gridComponents[i];
@@ -221,5 +238,13 @@ public class WaveFunctionCollapse : MonoBehaviour
         }
         iteration = 0;
         InitializeGrid();
+    }
+
+    private void SetTextElement()
+    {
+        if(totalAttempts <= 250){
+            float successPercentage = totalAttempts > 0 ? (successes / (float)totalAttempts) * 100 : 0;
+            textElement.text = $"Success: {successPercentage:F2}%\nTotal Attempts: {totalAttempts}";
+        }
     }
 }
