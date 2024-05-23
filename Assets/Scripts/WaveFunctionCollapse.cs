@@ -28,9 +28,11 @@ public class WaveFunctionCollapse : MonoBehaviour
 
     private void Awake()
     {
-        gridComponents = new List<Cell>();
-        SetTextElement();
-        InitializeGrid();
+        if(isActiveAndEnabled){
+            gridComponents = new List<Cell>();
+            SetTextElement();
+            InitializeGrid();
+        }
     }
 
     private void Update(){
