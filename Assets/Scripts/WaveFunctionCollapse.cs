@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 using Unity.VisualScripting;
 using TMPro;
+using UnityEngine.UI;
 
 //TODO? make that you can not only have 20x20 or 30x30 but also 20x30 or 12x24
 //TODO make that you can have probability so that some tiles are a bit more likely
@@ -23,6 +24,7 @@ public class WaveFunctionCollapse : MonoBehaviour
     private int totalAttempts = 0;
 
     public TextMeshProUGUI textElement;
+    public Toggle toggle;
 
     private void Awake()
     {
@@ -206,8 +208,7 @@ public class WaveFunctionCollapse : MonoBehaviour
         }else{
             successes++;
             totalAttempts++;
-            //PUT THIS INTO IF YOU WANT IT TO AUTOMATICALLY RESTART THE GENERATION
-            Restart();
+            if(toggle.isOn) Restart();
         }
     }
 
@@ -244,7 +245,7 @@ public class WaveFunctionCollapse : MonoBehaviour
     {
         if(totalAttempts <= 250){
             float successPercentage = totalAttempts > 0 ? (successes / (float)totalAttempts) * 100 : 0;
-            textElement.text = $"Success: {successPercentage:F2}%\nTotal Attempts: {totalAttempts}";
+            textElement.text = $"Success: {successPercentage:F2}%\nAttempts: {totalAttempts}";
         }
     }
 }
