@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 479065795}
   - component: {fileID: 479065794}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,6 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 604261656}
   - component: {fileID: 604261657}
+  - component: {fileID: 604261658}
   m_Layer: 0
   m_Name: WaveFunctionGenerator
   m_TagString: Untagged
@@ -375,9 +376,40 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604261655}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f44b1cd58617ac048b947ff923873a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dimensions: 30
+  tileObjects:
+  - {fileID: 8433104292058437876, guid: 266520bb409572447a9fb8b4c0c4d885, type: 3}
+  - {fileID: 3189788340234241263, guid: 5286b2299bd08594593a4e297ef673f4, type: 3}
+  - {fileID: 7548056183742379376, guid: e33fbf74e86e67d46b37dddfc72b23e9, type: 3}
+  - {fileID: 8314931454775954642, guid: c543757df6722f54aa46b6f00edda1f3, type: 3}
+  - {fileID: 3001559722282853524, guid: c4b2e7e437dc8b04fa2c9533930d6bf8, type: 3}
+  - {fileID: 1235908456290326997, guid: 032b9dc9973d40d4da5538803a34ecf9, type: 3}
+  - {fileID: 5586609666648098779, guid: 916df6bd82de01e4582d3f4f35d79937, type: 3}
+  - {fileID: 3996264964227686968, guid: fcfc99970bb2f6f4abc46ec1f881caef, type: 3}
+  - {fileID: 2628671393951361890, guid: 86d3b67817d8e1348b0910a5da64ae23, type: 3}
+  - {fileID: 5192539198167136981, guid: 8f9121f305c663a47bb0089cdcc7db4d, type: 3}
+  - {fileID: 5741776963557798559, guid: 44e8f893c6c54874dab7201b8818ca21, type: 3}
+  - {fileID: 8914043238440264813, guid: f2139f851cc4d79489085647a9297786, type: 3}
+  gridComponents: []
+  cellObj: {fileID: 4708005233751153331, guid: 936abc963f38a804e84760def12a01ee, type: 3}
+  backupTile: {fileID: 5192539198167136981, guid: 8f9121f305c663a47bb0089cdcc7db4d, type: 3}
+  textElement: {fileID: 1693692731}
+  toggle: {fileID: 1288022973}
+--- !u!114 &604261658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604261655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe22d14c766ece74dacb19a4b54fdd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dimensions: 30
@@ -1035,7 +1067,7 @@ GameObject:
   - component: {fileID: 1693692732}
   - component: {fileID: 1693692731}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Success and Attempts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
