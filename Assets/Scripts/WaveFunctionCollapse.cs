@@ -227,6 +227,7 @@ public class WaveFunctionCollapse : MonoBehaviour
     private void Restart()
     {
         SetTextElement();
+        StopAllCoroutines();
         for (int i = gridComponents.Count - 1; i >= 0; i--)
         {
             Cell cell = gridComponents[i];
