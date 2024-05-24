@@ -103,6 +103,8 @@ public class WaveFunctionCollapse2 : MonoBehaviour
         }
     }
 
+    //TODO? not go through every cell but only through cells neighbouring the collapsed cell and if a cell modified their neighbours ...
+    //TODO ABOVE especially for performance
     void UpdateGeneration()
     {
         List<Cell> newGenerationCell = new List<Cell>(gridComponents);
