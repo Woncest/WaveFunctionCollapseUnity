@@ -23,8 +23,13 @@ public class WaveFunctionCollapse2 : MonoBehaviour
     private int iteration;
     private int successes = 0;
     private int totalAttempts = 0;
+    private float currentRunTime = 0;
+    private float highestRunTime = 0;
+    private float lowestRunTime = 0;
 
     public TextMeshProUGUI textElement;
+    public TextMeshProUGUI timerTextElement;
+    public TextMeshProUGUI timerTextElement2;
     public Toggle toggle;
 
     private void Awake()
@@ -33,14 +38,17 @@ public class WaveFunctionCollapse2 : MonoBehaviour
             gridComponents = new List<Cell>();
             SetTextElement();
             InitializeGrid();
+            SetTimerTextElement();
         }
     }
 
     private void Update(){
+        currentRunTime += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.R))
         {
             totalAttempts++;
             Restart();
+            currentRunTime = 0;
         }
     }
 
@@ -100,6 +108,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
         }else{
             totalAttempts++;
             Restart();
+            currentRunTime = 0;
         }
     }
 
@@ -214,6 +223,8 @@ public class WaveFunctionCollapse2 : MonoBehaviour
             successes++;
             totalAttempts++;
             if(toggle.isOn) Restart();
+            SetTimerTextElement();
+            currentRunTime = 0;
         }
     }
 
@@ -249,9 +260,34 @@ public class WaveFunctionCollapse2 : MonoBehaviour
 
     private void SetTextElement()
     {
-        if(totalAttempts <= 250){
+        if (totalAttempts <= 250)
+        {
             float successPercentage = totalAttempts > 0 ? (successes / (float)totalAttempts) * 100 : 0;
             textElement.text = $"Success: {successPercentage:F2}%\nAttempts: {totalAttempts}";
+        }
+
+    }
+
+    private void SetTimerTextElement()
+    {
+        if (highestRunTime <= currentRunTime)
+        {
+            int minutes = Mathf.FloorToInt(currentRunTime / 60F);
+            int seconds = Mathf.FloorToInt(currentRunTime % 60F);
+            int milliseconds = Mathf.FloorToInt((currentRunTime * 100F) % 100F);
+
+            timerTextElement.text = string.Format("Highest Run Time: {0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
+            highestRunTime = currentRunTime;
+        }
+
+        if (lowestRunTime >= currentRunTime || lowestRunTime == 0)
+        {
+            int minutes = Mathf.FloorToInt(currentRunTime / 60F);
+            int seconds = Mathf.FloorToInt(currentRunTime % 60F);
+            int milliseconds = Mathf.FloorToInt((currentRunTime * 100F) % 100F);
+
+            timerTextElement2.text = string.Format("Lowest Run Time: {0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
+            lowestRunTime = currentRunTime;
         }
     }
 }
