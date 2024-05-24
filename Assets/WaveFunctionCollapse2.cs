@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 //TODO? make that you can not only have 20x20 or 30x30 but also 20x30 or 12x24
 //TODO make that you can have probability so that some tiles are a bit more likely
+//TODO if you wanna boost perfomance unity burst for somebody help from 3.5s -> 0.25s
 
 public class WaveFunctionCollapse2 : MonoBehaviour
 {
