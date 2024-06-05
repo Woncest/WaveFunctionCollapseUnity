@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de1b54d1a40fc1408ceebcd6027ac86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  probability: 1
   upNeighbours:
   - {fileID: 8914043238440264813}
   - {fileID: 3001559722282853524, guid: c4b2e7e437dc8b04fa2c9533930d6bf8, type: 3}
