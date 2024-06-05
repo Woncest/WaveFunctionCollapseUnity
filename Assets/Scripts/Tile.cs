@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    public int probability = 1;
     public Tile[] upNeighbours;
     public Tile[] rightNeighbours;
     public Tile[] downNeighbours;

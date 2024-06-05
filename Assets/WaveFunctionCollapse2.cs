@@ -89,7 +89,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
         cellToCollapse.collapsed = true;
         try
         {
-            Tile selectedTile = cellToCollapse.tileOptions[UnityEngine.Random.Range(0, cellToCollapse.tileOptions.Length)];
+            Tile selectedTile = SelectRandomTile(cellToCollapse.tileOptions);
             cellToCollapse.tileOptions = new Tile[] { selectedTile };
         }
         catch
@@ -289,5 +289,21 @@ public class WaveFunctionCollapse2 : MonoBehaviour
             timerTextElement2.text = string.Format("Lowest Run Time: {0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
             lowestRunTime = currentRunTime;
         }
+    }
+
+    public Tile SelectRandomTile(Tile[] tileOptions)
+    {
+        List<Tile> weightedTileList = new List<Tile>();
+
+        foreach (Tile tile in tileOptions)
+        {
+            for (int i = 0; i < tile.probability; i++)
+            {
+                weightedTileList.Add(tile);
+            }
+        }
+
+        int randomIndex = UnityEngine.Random.Range(0, weightedTileList.Count);
+        return weightedTileList[randomIndex];
     }
 }
