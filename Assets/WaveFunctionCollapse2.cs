@@ -104,7 +104,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
         cellToCollapse.setTile = generatedTile;
 
         if(!restart){
-            UpdateGeneration();
+            UpdateGeneration(randIndex);
         }else{
             totalAttempts++;
             Restart();
@@ -114,8 +114,19 @@ public class WaveFunctionCollapse2 : MonoBehaviour
 
     //TODO? not go through every cell but only through cells neighbouring the collapsed cell and if a cell modified their neighbours ...
     //TODO ABOVE especially for performance
-    void UpdateGeneration()
+    void UpdateGeneration(int indexWhereCellCollapsed)
     {
+
+        Cell collapsedCell = gridComponents[indexWhereCellCollapsed];
+
+        /*Debug.Log("Has Cell Up: " + HasCellUp(indexWhereCellCollapsed));
+        Debug.Log("Has Cell Down: " + HasCellDown(indexWhereCellCollapsed));
+        Debug.Log("Has Cell Left: " + HasCellLeft(indexWhereCellCollapsed));
+        Debug.Log("Has Cell Right: " + HasCellRight(indexWhereCellCollapsed));*/
+
+
+
+
         List<Cell> newGenerationCell = new List<Cell>(gridComponents);
 
         for(int y = 0; y < dimensions; y++)
@@ -305,5 +316,29 @@ public class WaveFunctionCollapse2 : MonoBehaviour
 
         int randomIndex = UnityEngine.Random.Range(0, weightedTileList.Count);
         return weightedTileList[randomIndex];
+    }
+
+    public bool HasCellDown(int index)
+    {
+        int row = index / dimensions;
+        return row > 0;
+    }
+
+    public bool HasCellUp(int index)
+    {
+        int row = index / dimensions;
+        return row < dimensions - 1;
+    }
+
+    public bool HasCellLeft(int index)
+    {
+        int col = index % dimensions;
+        return col > 0;
+    }
+
+    public bool HasCellRight(int index)
+    {
+        int col = index % dimensions;
+        return col < dimensions - 1;
     }
 }
