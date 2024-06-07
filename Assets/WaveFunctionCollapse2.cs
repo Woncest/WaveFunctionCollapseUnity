@@ -119,10 +119,10 @@ public class WaveFunctionCollapse2 : MonoBehaviour
 
         Cell collapsedCell = gridComponents[indexWhereCellCollapsed];
 
-        /*Debug.Log("Has Cell Up: " + HasCellUp(indexWhereCellCollapsed));
-        Debug.Log("Has Cell Down: " + HasCellDown(indexWhereCellCollapsed));
-        Debug.Log("Has Cell Left: " + HasCellLeft(indexWhereCellCollapsed));
-        Debug.Log("Has Cell Right: " + HasCellRight(indexWhereCellCollapsed));*/
+        /*Debug.Log("Has Cell Up: " + GetIndexUp(indexWhereCellCollapsed));
+        Debug.Log("Has Cell Down: " + GetIndexDown(indexWhereCellCollapsed));
+        Debug.Log("Has Cell Left: " + GetIndexLeft(indexWhereCellCollapsed));
+        Debug.Log("Has Cell Right: " + GetIndexRight(indexWhereCellCollapsed));*/
 
 
 
@@ -340,5 +340,105 @@ public class WaveFunctionCollapse2 : MonoBehaviour
     {
         int col = index % dimensions;
         return col < dimensions - 1;
+    }
+
+    public int GetIndexUp(int index)
+    {
+        if (HasCellUp(index))
+        {
+            return index - dimensions;
+        }
+        return -1;
+    }
+
+    public int GetIndexDown(int index)
+    {
+        if (HasCellDown(index))
+        {
+            return index + dimensions;
+        }
+        return -1;
+    }
+
+    public int GetIndexLeft(int index)
+    {
+        if (HasCellLeft(index))
+        {
+            return index - 1;
+        }
+        return -1;
+    }
+
+    public int GetIndexRight(int index)
+    {
+        if (HasCellRight(index))
+        {
+            return index + 1;
+        }
+        return -1;
+    }
+
+    private void SetTilesUpCell(int index, List<Tile> options)
+    {
+        Cell up = gridComponents[GetIndexUp(index)];
+        List<Tile> validOptions = new List<Tile>();
+
+        foreach (Tile possibleOptions in up.tileOptions)
+        {
+            var validOption = Array.FindIndex(tileObjects, obj => obj == possibleOptions);
+            var valid = tileObjects[validOption].downNeighbours;
+
+            validOptions = validOptions.Concat(valid).ToList();
+        }
+
+        CheckValidity(options, validOptions);
+    }
+
+    private void SetTilesDownCell(int index, List<Tile> options)
+    {
+        Cell down = gridComponents[GetIndexDown(index)];
+        List<Tile> validOptions = new List<Tile>();
+
+        foreach (Tile possibleOptions in down.tileOptions)
+        {
+            var validOption = Array.FindIndex(tileObjects, obj => obj == possibleOptions);
+            var valid = tileObjects[validOption].upNeighbours;
+
+            validOptions = validOptions.Concat(valid).ToList();
+        }
+
+        CheckValidity(options, validOptions);
+    }
+
+    private void SetTilesRightCell(int index, List<Tile> options)
+    {
+        Cell right = gridComponents[GetIndexRight(index)];
+        List<Tile> validOptions = new List<Tile>();
+
+        foreach (Tile possibleOptions in right.tileOptions)
+        {
+            var validOption = Array.FindIndex(tileObjects, obj => obj == possibleOptions);
+            var valid = tileObjects[validOption].leftNeighbours;
+
+            validOptions = validOptions.Concat(valid).ToList();
+        }
+
+        CheckValidity(options, validOptions);
+    }
+
+    private void SetTilesLeftCell(int index, List<Tile> options)
+    {
+        Cell left = gridComponents[GetIndexLeft(index)];
+        List<Tile> validOptions = new List<Tile>();
+
+        foreach(Tile possibleOptions in left.tileOptions)
+        {
+            var validOption = Array.FindIndex(tileObjects, obj => obj == possibleOptions);
+            var valid = tileObjects[validOption].rightNeighbours;
+
+            validOptions = validOptions.Concat(valid).ToList();
+        }
+
+        CheckValidity(options, validOptions);
     }
 }
