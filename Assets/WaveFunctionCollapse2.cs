@@ -119,11 +119,17 @@ public class WaveFunctionCollapse2 : MonoBehaviour
 
         Cell collapsedCell = gridComponents[indexWhereCellCollapsed];
 
-        /*Debug.Log("Has Cell Up: " + GetIndexUp(indexWhereCellCollapsed));
-        Debug.Log("Has Cell Down: " + GetIndexDown(indexWhereCellCollapsed));
-        Debug.Log("Has Cell Left: " + GetIndexLeft(indexWhereCellCollapsed));
-        Debug.Log("Has Cell Right: " + GetIndexRight(indexWhereCellCollapsed));*/
+        //1. Check if up/down/left/right is collapse
+        //2. If not go where it is not collapsed and eliminate now impossible options
+        //3. Continue going in not collapsed cells until nothing in possibilities has changed
 
+        //Make method that checks for cell at index that checks if up/down/right/left is collapsed or if options would change when compared
+        //If not collapsed and would change jump into method again with said cell
+
+        /*List<Tile> tileOptions = new List<Tile>();
+        tileOptions = gridComponents[indexWhereCellCollapsed].tileOptions.ToList();
+
+        CheckNeighbours(indexWhereCellCollapsed, tileOptions);*/
 
 
 
@@ -239,6 +245,26 @@ public class WaveFunctionCollapse2 : MonoBehaviour
         }
     }
 
+    private void CheckNeighbours(int indexWhereCellCollapsed, List<Tile> tileOptions)
+    {
+        if(HasCellUp(indexWhereCellCollapsed)){
+
+        }
+
+        if(HasCellDown(indexWhereCellCollapsed)){
+
+        }
+
+        if(HasCellRight(indexWhereCellCollapsed)){
+
+        }
+
+        if(HasCellLeft(indexWhereCellCollapsed)){
+
+        }
+
+    }
+
     void CheckValidity(List<Tile> optionList, List<Tile> validOption)
     {
         for(int x = optionList.Count - 1; x >=0; x--)
@@ -251,6 +277,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
         }
     }
 
+    #region HelperMethods
     private void Restart()
     {
         SetTextElement();
@@ -377,6 +404,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
         }
         return -1;
     }
+    #endregion
 
     private void SetTilesUpCell(int index, List<Tile> options)
     {
