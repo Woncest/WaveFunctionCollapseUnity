@@ -54,6 +54,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
 
     void InitializeGrid()
     {
+        int count = 0;
         for(int y = 0; y < dimensions; y++)
         {
             for(int x = 0; x < dimensions; x++)
@@ -61,6 +62,8 @@ public class WaveFunctionCollapse2 : MonoBehaviour
                 Cell newCell = Instantiate(cellObj, new Vector3(x, 0, y), Quaternion.identity);
                 newCell.CreateCell(false, tileObjects);
                 gridComponents.Add(newCell);
+                newCell.number = count;
+                count++;
             }
         }
 
@@ -247,24 +250,28 @@ public class WaveFunctionCollapse2 : MonoBehaviour
 
     private void CheckNeighbours(int indexWhereCellCollapsed, List<Tile> tileOptions)
     {
+        /*Debug.Log("HasCellUp: " + HasCellUp(indexWhereCellCollapsed) + " GetIndexUp: " + GetIndexUp(indexWhereCellCollapsed)
+                + "\nHasCellDown: " + HasCellDown(indexWhereCellCollapsed) + " GetIndexDown: " + GetIndexDown(indexWhereCellCollapsed)
+                + "\nHasCellRight: " + HasCellRight(indexWhereCellCollapsed) + " GetIndexRight: " + GetIndexRight(indexWhereCellCollapsed)
+                + "\nHasCellLeft: " + HasCellLeft(indexWhereCellCollapsed) + " GetIndexLeft: " + GetIndexLeft(indexWhereCellCollapsed));*/
         if(HasCellUp(indexWhereCellCollapsed)){
             int indexUp = GetIndexUp(indexWhereCellCollapsed);
-            SetTilesUpCell(indexUp, tileOptions);
+            SetTilesUpCell(indexWhereCellCollapsed, tileOptions);
         }
 
         if(HasCellDown(indexWhereCellCollapsed)){
             int indexDown = GetIndexDown(indexWhereCellCollapsed);
-            SetTilesDownCell(indexDown, tileOptions);
+            SetTilesDownCell(indexWhereCellCollapsed, tileOptions);
         }
 
         if(HasCellRight(indexWhereCellCollapsed)){
             int indexRight = GetIndexRight(indexWhereCellCollapsed);
-            SetTilesRightCell(indexRight, tileOptions);
+            SetTilesRightCell(indexWhereCellCollapsed, tileOptions);
         }
 
         if(HasCellLeft(indexWhereCellCollapsed)){
             int indexLeft = GetIndexLeft(indexWhereCellCollapsed);
-            SetTilesLeftCell(indexLeft, tileOptions);
+            SetTilesLeftCell(indexWhereCellCollapsed, tileOptions);
         }
 
     }
@@ -377,7 +384,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
     {
         if (HasCellUp(index))
         {
-            return index - dimensions;
+            return index + dimensions;
         }
         return -1;
     }
@@ -386,7 +393,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
     {
         if (HasCellDown(index))
         {
-            return index + dimensions;
+            return index - dimensions;
         }
         return -1;
     }

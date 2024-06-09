@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
+    public int number = -1;
     public bool collapsed;
     public Tile[] tileOptions;
 
