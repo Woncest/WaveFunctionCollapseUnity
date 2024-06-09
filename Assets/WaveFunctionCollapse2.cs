@@ -107,7 +107,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
         cellToCollapse.setTile = generatedTile;
 
         if(!restart){
-            UpdateGeneration(randIndex);
+            UpdateGeneration(cellToCollapse.number);
         }else{
             totalAttempts++;
             Restart();
@@ -424,7 +424,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
     
         foreach (Tile option in options)
         {
-            foreach (Tile upNeighbour in option.upNeighbours)
+            foreach (Tile upNeighbour in option.downNeighbours)
             {
                 validUpNeighbours.Add(upNeighbour);
             }
@@ -449,7 +449,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
     
         foreach (Tile option in options)
         {
-            foreach (Tile downNeighbour in option.downNeighbours)
+            foreach (Tile downNeighbour in option.upNeighbours)
             {
                 validDownNeighbours.Add(downNeighbour);
             }
@@ -474,7 +474,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
     
         foreach (Tile option in options)
         {
-            foreach (Tile rightNeighbour in option.rightNeighbours)
+            foreach (Tile rightNeighbour in option.leftNeighbours)
             {
                 validRightNeighbours.Add(rightNeighbour);
             }
@@ -499,7 +499,7 @@ public class WaveFunctionCollapse2 : MonoBehaviour
     
         foreach (Tile option in options)
         {
-            foreach (Tile leftNeighbour in option.leftNeighbours)
+            foreach (Tile leftNeighbour in option.rightNeighbours)
             {
                 validLeftNeighbours.Add(leftNeighbour);
             }

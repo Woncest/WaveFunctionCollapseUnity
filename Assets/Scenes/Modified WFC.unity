@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44b1cd58617ac048b947ff923873a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions: 30
+  dimensions: 10
   tileObjects:
   - {fileID: 8433104292058437876, guid: 266520bb409572447a9fb8b4c0c4d885, type: 3}
   - {fileID: 3189788340234241263, guid: 5286b2299bd08594593a4e297ef673f4, type: 3}
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe22d14c766ece74dacb19a4b54fdd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions: 30
+  dimensions: 5
   tileObjects:
   - {fileID: 8433104292058437876, guid: 266520bb409572447a9fb8b4c0c4d885, type: 3}
   - {fileID: 3189788340234241263, guid: 5286b2299bd08594593a4e297ef673f4, type: 3}
